@@ -207,7 +207,7 @@ bot.on(message('text'), async (ctx) => {
         {
           role: 'system',
           content:
-            'Ти корисний україномовний асистент. Відповідай на запити з абзацами, але не в стилі Markdown',
+            'Ти корисний україномовний асистент. Не використовуй стиль Markdown.',
         },
         ...limitedHistory,
         { role: 'user', content: text },
