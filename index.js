@@ -204,7 +204,11 @@ bot.on(message('text'), async (ctx) => {
     try {
       const limitedHistory = state.chatHistory.slice(-10);
       const messages = [
-        { role: 'system', content: 'Ти корисний україномовний асистент.' },
+        {
+          role: 'system',
+          content:
+            'Ти корисний україномовний асистент. Відповідай на запити з абзацами, але не в стилі Markdown',
+        },
         ...limitedHistory,
         { role: 'user', content: text },
       ];
